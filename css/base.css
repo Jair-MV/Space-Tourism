@@ -1,0 +1,78 @@
+/*
+    Just for debugging purposes
+
+    * {
+        outline: 2px solid red;
+    }
+*/
+
+:root {
+    --clr-primary: 230 35 7;
+
+    --clr-secondary: 231 77 90;
+
+    --clr-base: var(--clr-secondary);
+
+    --clr-neutral-min: 0 0 0;
+    --clr-neutral-max: 0 0 100;
+
+    --fs-base: 1.8rem;
+
+    --ff-base: "Bellefair", serif;
+    --ff-alt-alpha: "Barlow Condensed", sans-serif;
+    --ff-alt-beta: "Barlow", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: var(--ff-base);
+    font-size: var(--fs-base);
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: hsl(var(--clr-base));
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+select {
+    color: inherit;
+}
+
+textarea {
+    /* Don´t show scroll bars */
+    overflow: auto;
+}
