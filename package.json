@@ -1,0 +1,16 @@
+{
+    "name": "space-tourism",
+    "version": "1.0.0",
+    "description": "",
+    "license": "ISC",
+    "author": "Jair-MV",
+    "type": "commonjs",
+    "main": "index.html",
+    "scripts": {
+        "dev": "sass --watch scss:css",
+        "build": "sass scss:css --style=compressed --no-source-map"
+    },
+    "devDependencies": {
+        "sass": "^1.105.2"
+    }
+}
