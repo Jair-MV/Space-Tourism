@@ -81,12 +81,12 @@ textarea {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 2.8rem;
   letter-spacing: 4px;
-  color: hsl(231, 77%, 90%);
+  color: hsl(var(--clr-secondary));
 }
 .heading-primary span:last-child {
   font-family: "Bellefair", serif;
   font-size: 14.4rem;
-  color: hsl(0, 0%, 100%);
+  color: hsl(var(--clr-neutral-max));
 }
 @media (width <= 785px) {
   .heading-primary span:first-child {
@@ -100,7 +100,7 @@ textarea {
 .paragraph {
   font-size: 1.8rem;
   line-height: 1.8;
-  color: hsl(231, 77%, 90%);
+  color: hsl(var(--clr-secondary));
 }
 @media (width <= 1300px) {
   .paragraph {
@@ -181,12 +181,12 @@ textarea {
   align-items: center;
   width: 27.2rem;
   aspect-ratio: 1;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(var(--clr-neutral-max));
   border-radius: 50%;
   font-family: "Bellefair", serif;
   font-size: 3.2rem;
   text-transform: uppercase;
-  color: hsl(230, 35%, 7%);
+  color: hsl(var(--clr-primary));
 }
 .cta-btn::before {
   content: "";
@@ -198,7 +198,7 @@ textarea {
   transition: all 0.5s ease;
 }
 .cta-btn:hover::before {
-  background-color: hsla(0, 0%, 100%, 0.15);
+  background-color: hsl(var(--clr-neutral-max)/0.15);
   transform: scale(1.6);
 }
 @media (width <= 785px) {
@@ -217,9 +217,9 @@ textarea {
 .main-nav {
   position: relative;
   padding: 0 6.4rem 0 16rem;
-  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: hsl(var(--clr-neutral-max)/0.1);
   backdrop-filter: blur(30px);
-  color: hsl(0, 0%, 100%);
+  color: hsl(var(--clr-neutral-max));
 }
 .main-nav::before {
   content: "";
@@ -228,7 +228,7 @@ textarea {
   left: 5%;
   width: calc(100vw - 900px);
   height: 1px;
-  background-color: hsla(0, 0%, 100%, 0.5);
+  background-color: hsl(var(--clr-neutral-max)/0.5);
   transform: translateY(-50%) rotate(180deg);
   transform-origin: left;
 }
@@ -256,10 +256,10 @@ textarea {
   transition: all 0.3s ease;
 }
 .main-nav a:hover::before {
-  background-color: hsla(0, 0%, 100%, 0.5);
+  background-color: hsl(var(--clr-neutral-max)/0.5);
 }
 .main-nav a.selected::before {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(var(--clr-neutral-max));
 }
 .main-nav span {
   font-weight: bold;

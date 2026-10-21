@@ -3,10 +3,10 @@
 
     padding: 0 6.4rem 0 16rem;
 
-    background-color: hsl(0 0% 100% / 0.1);
+    background-color: hsl(var(--clr-neutral-max) / 0.1);
     backdrop-filter: blur(30px);
 
-    color: hsl(0 0% 100%);
+    color: hsl(var(--clr-neutral-max));
 
     &::before {
         content: "";
@@ -18,7 +18,7 @@
         width: calc(100vw - 900px);
         height: 1px;
 
-        background-color: hsl(0 0% 100% / 0.5);
+        background-color: hsl(var(--clr-neutral-max) / 0.5);
 
         transform: translateY(-50%) rotate(180deg);
         transform-origin: left;
@@ -56,11 +56,11 @@
         }
 
         &:hover::before {
-            background-color: hsl(0 0% 100% / 0.5);
+            background-color: hsl(var(--clr-neutral-max) / 0.5);
         }
 
         &.selected::before {
-            background-color: hsl(0 0% 100%);
+            background-color: hsl(var(--clr-neutral-max));
         }
     }
 

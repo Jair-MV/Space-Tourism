@@ -11,13 +11,13 @@
         font-family: "Barlow Condensed", sans-serif;
         font-size: 2.8rem;
         letter-spacing: 4px;
-        color: hsl(231 77% 90%);
+        color: hsl(var(--clr-secondary));
     }
 
     & span:last-child {
         font-family: "Bellefair", serif;
         font-size: 14.4rem;
-        color: hsl(0 0% 100%);
+        color: hsl(var(--clr-neutral-max));
     }
 
     @media (width <= 785px) {
@@ -34,7 +34,7 @@
 .paragraph {
     font-size: 1.8rem;
     line-height: 1.8;
-    color: hsl(231 77% 90%);
+    color: hsl(var(--clr-secondary));
 
     @media (width <= 1300px) {
         font-size: 1.6rem;

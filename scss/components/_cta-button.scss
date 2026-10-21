@@ -8,13 +8,13 @@
     width: 27.2rem;
     aspect-ratio: 1;
 
-    background-color: hsl(0 0% 100%);
+    background-color: hsl(var(--clr-neutral-max));
     border-radius: 50%;
 
     font-family: "Bellefair", serif;
     font-size: 3.2rem;
     text-transform: uppercase;
-    color: hsl(230 35% 7%);
+    color: hsl(var(--clr-primary));
 
     &::before {
         content: "";
@@ -30,7 +30,7 @@
     }
 
     &:hover::before {
-        background-color: hsl(0 0% 100% / 0.15);
+        background-color: hsl(var(--clr-neutral-max) / 0.15);
         transform: scale(1.6);
     }
 
