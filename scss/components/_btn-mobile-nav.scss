@@ -5,19 +5,19 @@
     border: none;
     background-color: transparent;
 
-    & img[alt="Close icon"] {
+    & img:first-child {
+        display: block;
+    }
+
+    & img:last-child {
         display: none;
     }
 
-    & img[alt="Hamburguer icon"] {
+    .main-nav-open & img:first-child {
         display: block;
     }
 
-    .main-nav-open & img[alt="Close icon"] {
-        display: block;
-    }
-
-    .main-nav-open & img[alt="Hamburguer icon"] {
+    .main-nav-open & img:last-child {
         display: none;
     }
 

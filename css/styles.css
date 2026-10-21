@@ -155,16 +155,16 @@ textarea {
   border: none;
   background-color: transparent;
 }
-.btn-mobile-nav img[alt="Close icon"] {
+.btn-mobile-nav img:first-child {
+  display: block;
+}
+.btn-mobile-nav img:last-child {
   display: none;
 }
-.btn-mobile-nav img[alt="Hamburguer icon"] {
+.main-nav-open .btn-mobile-nav img:first-child {
   display: block;
 }
-.main-nav-open .btn-mobile-nav img[alt="Close icon"] {
-  display: block;
-}
-.main-nav-open .btn-mobile-nav img[alt="Hamburguer icon"] {
+.main-nav-open .btn-mobile-nav img:last-child {
   display: none;
 }
 @media (width <= 785px) {
