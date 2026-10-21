@@ -1,0 +1,41 @@
+.cta-btn {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 27.2rem;
+    aspect-ratio: 1;
+
+    background-color: hsl(0 0% 100%);
+    border-radius: 50%;
+
+    font-family: "Bellefair", serif;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    color: hsl(230 35% 7%);
+
+    &::before {
+        content: "";
+
+        position: absolute;
+
+        width: 100%;
+        aspect-ratio: 1;
+        background-color: transparent;
+        border-radius: 50%;
+
+        transition: all 0.5s ease;
+    }
+
+    &:hover::before {
+        background-color: hsl(0 0% 100% / 0.15);
+        transform: scale(1.6);
+    }
+
+    @media (width <= 785px) {
+        width: 14.4rem;
+        font-size: 1.8rem;
+    }
+}

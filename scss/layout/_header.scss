@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4rem 0 0 6rem;
+
+    @media (width <= 1300px) {
+        padding-top: 0;
+        padding-left: 4rem;
+    }
+
+    @media (width <= 785px) {
+        padding: 2.4rem;
+    }
+}

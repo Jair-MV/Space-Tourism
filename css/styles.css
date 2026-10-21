@@ -1,0 +1,369 @@
+@charset "UTF-8";
+:root {
+  --clr-primary: 230 35 7;
+  --clr-secondary: 231 77 90;
+  --clr-base: var(--clr-secondary);
+  --clr-neutral-min: 0 0 0;
+  --clr-neutral-max: 0 0 100;
+  --fs-base: 1.8rem;
+  --ff-base: "Barlow", sans-serif;
+  --ff-alt-alpha: "Barlow Condensed", sans-serif;
+  --ff-alt-beta: "Bellefair", serif;
+}
+
+/*
+    Just for debugging purposes
+
+    * {
+        outline: 2px solid red;
+    }
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-base);
+  font-size: var(--fs-base);
+  font-weight: 400;
+  line-height: 1;
+  color: hsl(var(--clr-base));
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+select {
+  color: inherit;
+}
+
+textarea {
+  /* Don´t show scroll bars */
+  overflow: auto;
+}
+
+.heading-primary {
+  line-height: normal;
+}
+.heading-primary span {
+  display: block;
+  text-transform: uppercase;
+}
+.heading-primary span:first-child {
+  margin-bottom: 2.4rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 4px;
+  color: hsl(231, 77%, 90%);
+}
+.heading-primary span:last-child {
+  font-family: "Bellefair", serif;
+  font-size: 14.4rem;
+  color: hsl(0, 0%, 100%);
+}
+@media (width <= 785px) {
+  .heading-primary span:first-child {
+    font-size: 1.6rem;
+  }
+  .heading-primary span:last-child {
+    font-size: 8rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: hsl(231, 77%, 90%);
+}
+@media (width <= 1300px) {
+  .paragraph {
+    font-size: 1.6rem;
+  }
+}
+@media (width <= 785px) {
+  .paragraph {
+    font-size: 1.5rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 111rem;
+}
+@media (width <= 1300px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0 0 6rem;
+}
+@media (width <= 1300px) {
+  .header {
+    padding-top: 0;
+    padding-left: 4rem;
+  }
+}
+@media (width <= 785px) {
+  .header {
+    padding: 2.4rem;
+  }
+}
+
+.bg-img {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-mobile-nav {
+  z-index: 9;
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+.btn-mobile-nav img[alt="Close icon"] {
+  display: none;
+}
+.btn-mobile-nav img[alt="Hamburguer icon"] {
+  display: block;
+}
+.main-nav-open .btn-mobile-nav img[alt="Close icon"] {
+  display: block;
+}
+.main-nav-open .btn-mobile-nav img[alt="Hamburguer icon"] {
+  display: none;
+}
+@media (width <= 785px) {
+  .btn-mobile-nav {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.cta-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27.2rem;
+  aspect-ratio: 1;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  font-family: "Bellefair", serif;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  color: hsl(230, 35%, 7%);
+}
+.cta-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.cta-btn:hover::before {
+  background-color: hsla(0, 0%, 100%, 0.15);
+  transform: scale(1.6);
+}
+@media (width <= 785px) {
+  .cta-btn {
+    width: 14.4rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (width <= 785px) {
+  .logo {
+    width: 4rem;
+  }
+}
+
+.main-nav {
+  position: relative;
+  padding: 0 6.4rem 0 16rem;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  backdrop-filter: blur(30px);
+  color: hsl(0, 0%, 100%);
+}
+.main-nav::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: calc(100vw - 900px);
+  height: 1px;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: left;
+}
+.main-nav ul {
+  display: flex;
+  gap: 4.8rem;
+}
+.main-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  height: 9.6rem;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2px;
+}
+.main-nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  transition: all 0.3s ease;
+}
+.main-nav a:hover::before {
+  background-color: hsla(0, 0%, 100%, 0.5);
+}
+.main-nav a.selected::before {
+  background-color: hsl(0, 0%, 100%);
+}
+.main-nav span {
+  font-weight: bold;
+  letter-spacing: 2.7px;
+}
+@media (width <= 1300px) {
+  .main-nav {
+    padding: 0 4rem 0 8rem;
+  }
+  .main-nav::before {
+    content: normal;
+  }
+  .main-nav a.selected span {
+    display: none;
+  }
+}
+@media (width <= 785px) {
+  .main-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    width: 60%;
+    height: 100vh;
+    min-width: 25.4rem;
+    padding: 13.3rem 0 0 3.2rem;
+    transform: translateX(100%);
+    transition: transform 300ms ease;
+  }
+  .main-nav-open .main-nav {
+    transform: translateX(0);
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  .main-nav a {
+    gap: 0.8rem;
+    width: 100%;
+    height: auto;
+  }
+  .main-nav a::before {
+    left: auto;
+    bottom: auto;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+  }
+  .main-nav a.selected span {
+    display: block;
+  }
+}
+
+.bg-img {
+  background-image: url("../assets/home/background-home-desktop.jpg");
+}
+@media (width <= 1300px) {
+  .bg-img {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+}
+@media (width <= 750px) {
+  .bg-img {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+  }
+}
+
+.grid {
+  padding-top: 41.7rem;
+  padding-bottom: 12.8rem;
+}
+.grid .heading-primary {
+  margin-bottom: 2.4rem;
+}
+.grid .cta-btn {
+  justify-self: end;
+  align-self: center;
+}
+.grid .paragraph {
+  max-width: 54rem;
+}
+@media (width <= 1300px) {
+  .grid {
+    justify-items: center;
+    padding-top: 12.8rem;
+    text-align: center;
+  }
+  .grid .cta-btn {
+    justify-self: center;
+  }
+  .grid .paragraph {
+    max-width: 51.2rem;
+    margin-bottom: 6.6rem;
+  }
+}
+@media (width <= 785px) {
+  .grid {
+    padding-top: 2.4rem;
+  }
+  .grid .paragraph {
+    max-width: 32.7rem;
+    margin-bottom: 12rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

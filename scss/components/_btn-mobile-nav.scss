@@ -1,0 +1,28 @@
+.btn-mobile-nav {
+    z-index: 9;
+
+    display: none;
+    border: none;
+    background-color: transparent;
+
+    & img[alt="Close icon"] {
+        display: none;
+    }
+
+    & img[alt="Hamburguer icon"] {
+        display: block;
+    }
+
+    .main-nav-open & img[alt="Close icon"] {
+        display: block;
+    }
+
+    .main-nav-open & img[alt="Hamburguer icon"] {
+        display: none;
+    }
+
+    @media (width <= 785px) {
+        display: block;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,46 @@
+.heading-primary {
+    line-height: normal;
+
+    & span {
+        display: block;
+        text-transform: uppercase;
+    }
+
+    & span:first-child {
+        margin-bottom: 2.4rem;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 4px;
+        color: hsl(231 77% 90%);
+    }
+
+    & span:last-child {
+        font-family: "Bellefair", serif;
+        font-size: 14.4rem;
+        color: hsl(0 0% 100%);
+    }
+
+    @media (width <= 785px) {
+        span:first-child {
+            font-size: 1.6rem;
+        }
+
+        span:last-child {
+            font-size: 8rem;
+        }
+    }
+}
+
+.paragraph {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: hsl(231 77% 90%);
+
+    @media (width <= 1300px) {
+        font-size: 1.6rem;
+    }
+
+    @media (width <= 785px) {
+        font-size: 1.5rem;
+    }
+}
