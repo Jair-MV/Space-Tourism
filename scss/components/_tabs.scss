@@ -1,0 +1,51 @@
+.tabs {
+    display: flex;
+    gap: 3.2rem;
+
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.6rem;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: hsl(var(--clr-secondary));
+
+    li {
+        position: relative;
+
+        height: 3.2rem;
+
+        cursor: pointer;
+    }
+
+    li::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 3px;
+    }
+
+    li:hover::before {
+        background-color: hsl(var(--clr-neutral-max) / 0.5);
+    }
+
+    li.selected {
+        color: hsl(var(--clr-neutral-max));
+    }
+
+    li.selected::before {
+        background-color: hsl(var(--clr-neutral-max));
+    }
+
+    @media (width <= 1300px) {
+        margin: 0 auto;
+    }
+
+    @media (width <= 785px) {
+        font-size: 1.4rem;
+        letter-spacing: 15%;
+    }
+}

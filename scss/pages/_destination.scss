@@ -1,0 +1,59 @@
+.bg-img--destination {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+
+    @media (width <= 768px) {
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
+    }
+
+    @media (width <= 375px) {
+        background-image: url("../assets/destination/background-destination-mobile.jpg");
+    }
+}
+
+.destination {
+    padding: 4.8rem 0;
+
+    .destination-primary-heading {
+        margin-bottom: 15rem;
+    }
+
+    > div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        margin-top: 19rem;
+    }
+
+    @media (width <= 1300px) {
+        gap: 7.4rem;
+        padding: 4rem;
+
+        .destination-primary-heading {
+            margin-bottom: 6.6rem;
+        }
+
+        .destination-img {
+            margin: 0 auto;
+            width: 30rem;
+        }
+
+        > div:last-child {
+            gap: 2.4rem;
+            margin: 0 auto;
+        }
+    }
+
+    @media (width <= 785px) {
+        gap: 3.2rem;
+        padding: 2.4rem;
+
+        .destination-primary-heading {
+            margin-bottom: 5rem;
+        }
+
+        .destination-img {
+            width: 15rem;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.destination-info {
+    h2 {
+        margin-bottom: 1.6rem;
+
+        font-family: "Bellefair", serif;
+        font-size: 9.6rem;
+        line-height: normal;
+        text-transform: uppercase;
+        color: hsl(var(--clr-neutral-max));
+    }
+
+    @media (width <= 1300px) {
+        max-width: 51.4rem;
+        text-align: center;
+
+        h2 {
+            font-size: 8rem;
+        }
+    }
+
+    @media (width <= 785px) {
+        h2 {
+            font-size: 5.6rem;
+        }
+    }
+}

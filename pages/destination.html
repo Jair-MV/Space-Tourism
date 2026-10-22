@@ -24,12 +24,13 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/destination.css" />
 
         <script defer src="../js/script.js"></script>
     </head>
 
     <body>
-        <div class="bg-img">
+        <div class="bg-img bg-img--destination">
             <header class="header">
                 <img
                     src="../assets/shared/logo.svg"
@@ -71,7 +72,51 @@
             </header>
 
             <main>
-                <div class="destination grid"></div>
+                <div class="destination grid">
+                    <div>
+                        <h1 class="destination-primary-heading">
+                            <span>01</span> <span>Pick your destination</span>
+                        </h1>
+
+                        <img
+                            src="../assets/destination/image-moon.webp"
+                            alt="Moon in close view, with a heavily cratered gray surface, darker shadowed regions, and a subtle glow along the edge, floating against a dark sky and creating a calm, mysterious lunar atmosphere."
+                            class="destination-img"
+                        />
+                    </div>
+
+                    <div>
+                        <ul class="tabs">
+                            <li class="selected">Moon</li>
+                            <li>Mars</li>
+                            <li>Europa</li>
+                            <li>Titan</li>
+                        </ul>
+
+                        <div class="destination-info">
+                            <h2>Moon</h2>
+                            <p class="paragraph">
+                                See our planet as you’ve never seen it before. A
+                                perfect relaxing trip away to help regain
+                                perspective and come back refreshed. While
+                                you’re there, take in some history by visiting
+                                the Luna 2 and Apollo 11 landing sites.
+                            </p>
+                        </div>
+
+                        <div class="destination-stats">
+                            <div>
+                                <p>Avg. distance</p>
+                                <p>384,400 km</p>
+                            </div>
+
+                            <div>
+                                <p>Est. travel time</p>
+                                <p>3 days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </body>
