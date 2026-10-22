@@ -1,0 +1,11 @@
+.bg-img--technology {
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+
+    @media (width <= 768px) {
+        background-image: url("../assets/technology/background-technology-tablet.jpg");
+    }
+
+    @media (width <= 375px) {
+        background-image: url("../assets/technology/background-technology-mobile.jpg");
+    }
+}
