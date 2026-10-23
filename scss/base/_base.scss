@@ -18,6 +18,8 @@
 html {
     font-size: 62.5%; /* 1rem = 10px */
     scroll-behavior: smooth;
+
+    overflow-x: hidden;
 }
 
 body {
@@ -30,6 +32,8 @@ body {
     line-height: 1;
 
     color: hsl(var(--clr-base));
+
+    overflow-x: hidden;
 }
 
 img,
