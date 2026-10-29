@@ -1,51 +1,80 @@
 .tabs {
     display: flex;
-    gap: 3.2rem;
 
-    font-family: "Barlow Condensed", sans-serif;
-    font-size: 1.6rem;
-    line-height: normal;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: hsl(var(--clr-secondary));
+    &--underline {
+        gap: 3.2rem;
 
-    li {
-        position: relative;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 1.6rem;
+        line-height: normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: hsl(var(--clr-secondary));
 
-        height: 3.2rem;
+        li {
+            position: relative;
 
-        cursor: pointer;
+            height: 3.2rem;
+
+            cursor: pointer;
+        }
+
+        li::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 3px;
+        }
+
+        li:hover::before {
+            background-color: hsl(var(--clr-neutral-max) / 0.5);
+        }
+
+        li.selected {
+            color: hsl(var(--clr-neutral-max));
+        }
+
+        li.selected::before {
+            background-color: hsl(var(--clr-neutral-max));
+        }
+
+        @media (width <= 1300px) {
+            margin: 0 auto;
+        }
+
+        @media (width <= 785px) {
+            font-size: 1.4rem;
+            letter-spacing: 15%;
+        }
     }
 
-    li::before {
-        content: "";
+    &--dots {
+        gap: 4rem;
 
-        position: absolute;
-        left: 0;
-        bottom: 0;
+        div {
+            width: 15px;
+            aspect-ratio: 1;
+            background-color: hsl(var(--clr-neutral-max) / 17.44%);
+            border-radius: 50%;
+            cursor: pointer;
+        }
 
-        width: 100%;
-        height: 3px;
-    }
+        div:hover {
+            background-color: hsl(var(--clr-neutral-max) / 0.5);
+        }
 
-    li:hover::before {
-        background-color: hsl(var(--clr-neutral-max) / 0.5);
-    }
+        div.selected {
+            background-color: hsl(var(--clr-neutral-max));
+        }
 
-    li.selected {
-        color: hsl(var(--clr-neutral-max));
-    }
-
-    li.selected::before {
-        background-color: hsl(var(--clr-neutral-max));
-    }
-
-    @media (width <= 1300px) {
-        margin: 0 auto;
-    }
-
-    @media (width <= 785px) {
-        font-size: 1.4rem;
-        letter-spacing: 15%;
+        @media (width <= 1300px) {
+            div {
+                width: 10px;
+            }
+        }
     }
 }

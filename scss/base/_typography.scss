@@ -65,6 +65,85 @@
     }
 }
 
+.crew-primary-heading {
+    font-family: var(--ff-alt-alpha);
+    font-size: 2.8rem;
+    line-height: normal;
+
+    color: hsl(var(--clr-neutral-max));
+
+    span:first-child {
+        margin-right: 2.4rem;
+
+        font-weight: bold;
+        letter-spacing: 4.72px;
+
+        opacity: 0.25;
+    }
+
+    span:last-child {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    @media (width <= 1300px) {
+        font-size: 2rem;
+
+        span:first-child,
+        span:last-child {
+            letter-spacing: 15%;
+        }
+    }
+
+    @media (width <= 785px) {
+        font-size: 1.6rem;
+    }
+}
+
+.crew-member-name {
+    font-family: var(--ff-alt-beta);
+    line-height: normal;
+    color: hsl(var(--clr-neutral-max));
+    text-transform: uppercase;
+
+    span {
+        display: block;
+    }
+
+    span:first-child {
+        margin-bottom: 1.6rem;
+
+        font-size: 3.2rem;
+        opacity: 50.52%;
+    }
+
+    span:last-child {
+        font-size: 5.6rem;
+    }
+
+    @media (width <= 1300px) {
+        span:first-child {
+            font-size: 2.4rem;
+            opacity: 50%;
+        }
+
+        span:last-child {
+            font-size: 4rem;
+        }
+    }
+
+    @media (width <= 785px) {
+        span:first-child {
+            margin-bottom: 0.8rem;
+            font-size: 1.8rem;
+        }
+
+        span:last-child {
+            font-size: 2.4rem;
+        }
+    }
+}
+
 .paragraph {
     font-size: 1.8rem;
     line-height: 1.8;
