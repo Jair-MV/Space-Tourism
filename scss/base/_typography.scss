@@ -31,41 +31,9 @@
     }
 }
 
-.destination-primary-heading {
-    font-family: "Barlow Condensed", sans-serif;
-    font-size: 2.8rem;
-    line-height: normal;
-
-    span:first-child {
-        margin-right: 2.4rem;
-
-        font-weight: bold;
-        letter-spacing: 4.72px;
-        color: hsl(var(--clr-neutral-max / 0.25));
-    }
-
-    span:last-child {
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        color: hsl(var(--clr-neutral-max));
-    }
-
-    @media (width <= 1300px) {
-        font-size: 2rem;
-
-        span:first-child,
-        span:last-child {
-            letter-spacing: 15%;
-        }
-    }
-
-    @media (width <= 785px) {
-        font-size: 1.6rem;
-        text-align: center;
-    }
-}
-
-.crew-primary-heading {
+.destination-primary-heading,
+.crew-primary-heading,
+.technology-primary-heading {
     font-family: var(--ff-alt-alpha);
     font-size: 2.8rem;
     line-height: normal;
@@ -100,7 +68,8 @@
     }
 }
 
-.crew-member-name {
+.crew-member-name,
+.technology-name {
     font-family: var(--ff-alt-beta);
     line-height: normal;
     color: hsl(var(--clr-neutral-max));

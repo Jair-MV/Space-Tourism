@@ -9,3 +9,63 @@
         background-image: url("../assets/technology/background-technology-mobile.jpg");
     }
 }
+
+.technology {
+    .technology-primary-heading {
+        max-width: 127.5rem;
+        margin-left: auto;
+        margin-bottom: 9rem;
+        padding-top: 4.8rem;
+    }
+
+    .technology-info-block {
+        display: flex;
+        gap: 6.4rem;
+    }
+
+    .technology-name {
+        margin-bottom: 2.4rem;
+    }
+
+    img {
+        justify-self: right;
+    }
+
+    @media (width <= 1300px) {
+        .technology-primary-heading {
+            max-width: 68.8rem;
+            margin-right: auto;
+            margin-bottom: 8.8rem;
+        }
+
+        .technology-info-block {
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+
+            max-width: 51.2rem;
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .technology-name {
+            margin-bottom: 1.6rem;
+        }
+
+        picture {
+            order: -1;
+        }
+    }
+
+    @media (width <= 785px) {
+        .technology-primary-heading {
+            text-align: center;
+        }
+
+        .technology-info-block {
+            max-width: 34.7rem;
+            padding: 0 1rem;
+        }
+    }
+}

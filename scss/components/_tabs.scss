@@ -77,4 +77,53 @@
             }
         }
     }
+
+    &--circles {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 8rem;
+            aspect-ratio: 1;
+            border: 1px solid hsl(var(--clr-neutral-max) / 0.25);
+            border-radius: 50%;
+
+            font-size: 3.2rem;
+            font-family: var(--ff-alt-beta);
+
+            cursor: pointer;
+        }
+
+        div:hover {
+            border-color: hsl(var(--clr-neutral-max));
+        }
+
+        div.selected {
+            color: hsl(var(--clr-neutral-min));
+            background-color: hsl(var(--clr-neutral-max));
+            border-color: hsl(var(--clr-neutral-max));
+        }
+
+        @media (width <= 1300px) {
+            flex-direction: row;
+            gap: 1.6rem;
+
+            div {
+                width: 5.6rem;
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (width <= 785px) {
+            div {
+                width: 4rem;
+                font-size: 1.8rem;
+            }
+        }
+    }
 }
