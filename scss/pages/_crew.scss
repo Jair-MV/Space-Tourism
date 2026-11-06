@@ -23,8 +23,12 @@
         margin-bottom: 2.4rem;
     }
 
-    img {
+    picture {
+        display: block;
         justify-self: end;
+    }
+
+    img {
         width: 48rem;
         mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     }
@@ -48,8 +52,11 @@
             text-align: center;
         }
 
-        img {
+        picture {
             justify-self: center;
+        }
+
+        img {
             width: 36rem;
         }
     }

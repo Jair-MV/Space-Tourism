@@ -59,6 +59,7 @@ async function initDestinationTabs() {
     const dataUrl = new URL("../data.json", window.location.href);
 
     const imageEl = document.querySelector(".destination-img");
+    const sourceEl = document.getElementById("destination-image-webp");
     const nameEl = document.querySelector(".destination-info h2");
     const descriptionEl = document.querySelector(
         ".destination-info .paragraph",
@@ -71,7 +72,8 @@ async function initDestinationTabs() {
         descriptionEl.textContent = destination.description;
         distanceEl.textContent = destination.distance;
         travelEl.textContent = destination.travel;
-        imageEl.src = new URL(destination.images.webp, dataUrl).href;
+        sourceEl.srcset = new URL(destination.images.webp, dataUrl).href;
+        imageEl.src = new URL(destination.images.png, dataUrl).href;
         imageEl.alt = destination.name;
     }
 
@@ -95,12 +97,14 @@ async function initCrewTabs() {
     const nameEl = document.getElementById("crew-member-name");
     const bioEl = document.querySelector(".crew-member-info .paragraph");
     const imageEl = document.querySelector(".crew-member-photo");
+    const sourceEl = document.getElementById("crew-image-webp");
 
     function renderCrewMember(member) {
         roleEl.textContent = member.role;
         nameEl.textContent = member.name;
         bioEl.textContent = member.bio;
-        imageEl.src = new URL(member.images.webp, dataUrl).href;
+        sourceEl.srcset = new URL(member.images.webp, dataUrl).href;
+        imageEl.src = new URL(member.images.png, dataUrl).href;
         imageEl.alt = member.name;
     }
 
