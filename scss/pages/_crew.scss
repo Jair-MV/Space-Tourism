@@ -11,7 +11,7 @@
 }
 
 .crew {
-    padding-top: 4.8rem;
+    padding-block: 4.8rem;
 
     > div {
         display: flex;
@@ -26,10 +26,17 @@
     picture {
         display: block;
         justify-self: end;
+        align-self: start;
+        width: 48rem;
+        max-width: 100%;
+        aspect-ratio: 514 / 700;
     }
 
-    img {
-        width: 48rem;
+    .crew-member-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+        object-position: center bottom;
         mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     }
 
@@ -54,9 +61,6 @@
 
         picture {
             justify-self: center;
-        }
-
-        img {
             width: 36rem;
         }
     }
@@ -68,7 +72,7 @@
             align-self: center;
         }
 
-        img {
+        picture {
             width: 26rem;
         }
     }

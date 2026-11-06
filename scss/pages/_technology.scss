@@ -11,6 +11,11 @@
 }
 
 .technology {
+    width: 100%;
+    max-width: 144rem;
+    margin-inline: auto;
+    padding-bottom: 4.8rem;
+
     .technology-primary-heading {
         max-width: 127.5rem;
         margin-left: auto;
@@ -32,6 +37,8 @@
     }
 
     @media (width <= 1300px) {
+        padding-bottom: 4rem;
+
         .technology-primary-heading {
             max-width: 68.8rem;
             margin-right: auto;
@@ -59,6 +66,8 @@
     }
 
     @media (width <= 785px) {
+        padding-bottom: 2.4rem;
+
         .technology-primary-heading {
             text-align: center;
         }
