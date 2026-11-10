@@ -21,11 +21,14 @@
         margin-bottom: 15rem;
     }
 
-    > div:last-child {
+    > div:last-child,
+    .destination-panel:not([hidden]) {
         display: flex;
         flex-direction: column;
         gap: 4rem;
+    }
 
+    > div:last-child {
         margin-top: 19rem;
     }
 
@@ -42,8 +45,12 @@
             width: 30rem;
         }
 
-        > div:last-child {
+        > div:last-child,
+        .destination-panel:not([hidden]) {
             gap: 2.4rem;
+        }
+
+        > div:last-child {
             margin: 0 auto;
         }
     }

@@ -38,7 +38,18 @@
                     class="logo"
                 />
 
-                <nav class="main-nav">
+                <button
+                    class="btn-mobile-nav"
+                    type="button"
+                    aria-label="Main navigation"
+                    aria-expanded="false"
+                    aria-controls="main-nav"
+                >
+                    <img src="../assets/shared/icon-hamburger.svg" alt="" />
+                    <img src="../assets/shared/icon-close.svg" alt="" />
+                </button>
+
+                <nav class="main-nav" id="main-nav">
                     <ul>
                         <li>
                             <a href="../index.html"><span>00</span> Home</a>
@@ -52,23 +63,12 @@
                             <a href="crew.html"><span>02</span> Crew</a>
                         </li>
                         <li>
-                            <a href="#" class="selected"
+                            <a href="#" class="selected" aria-current="page"
                                 ><span>03</span> Technology</a
                             >
                         </li>
                     </ul>
                 </nav>
-
-                <button class="btn-mobile-nav">
-                    <img
-                        src="../assets/shared/icon-hamburger.svg"
-                        alt="Three light-blue horizontal bars forming a menu icon."
-                    />
-                    <img
-                        src="../assets/shared/icon-close.svg"
-                        alt="Light blue X-shaped close icon formed by two crossing bars; a simple, neutral interface symbol with no text or wider scene."
-                    />
-                </button>
             </header>
 
             <main>
@@ -80,16 +80,33 @@
                     <div class="grid grid--span">
                         <div>
                             <div class="technology-info-block">
-                                <div class="tabs tabs--circles">
-                                    <div class="selected">1</div>
-                                    <div>2</div>
-                                    <div>3</div>
+                                <div
+                                    class="tabs tabs--circles"
+                                    id="technology-tabs"
+                                    role="tablist"
+                                    aria-label="Space technology"
+                                >
+                                    <button
+                                        type="button"
+                                        id="technology-tabs-1"
+                                        role="tab"
+                                        aria-selected="true"
+                                        aria-controls="technology-tabs-1-panel"
+                                        aria-label="1. Launch vehicle"
+                                    >
+                                        1
+                                    </button>
                                 </div>
 
-                                <div>
+                                <div
+                                    id="technology-tabs-1-panel"
+                                    role="tabpanel"
+                                    aria-labelledby="technology-tabs-1"
+                                    tabindex="0"
+                                >
                                     <h2 class="technology-name">
                                         <span>The terminology</span>
-                                        <span id="technology-name"
+                                        <span class="technology-term"
                                             >Launch vehicle</span
                                         >
                                     </h2>

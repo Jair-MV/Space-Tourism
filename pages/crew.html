@@ -38,7 +38,18 @@
                     class="logo"
                 />
 
-                <nav class="main-nav">
+                <button
+                    class="btn-mobile-nav"
+                    type="button"
+                    aria-label="Main navigation"
+                    aria-expanded="false"
+                    aria-controls="main-nav"
+                >
+                    <img src="../assets/shared/icon-hamburger.svg" alt="" />
+                    <img src="../assets/shared/icon-close.svg" alt="" />
+                </button>
+
+                <nav class="main-nav" id="main-nav">
                     <ul>
                         <li>
                             <a href="../index.html"><span>00</span> Home</a>
@@ -49,7 +60,7 @@
                             >
                         </li>
                         <li>
-                            <a href="#" class="selected"
+                            <a href="#" class="selected" aria-current="page"
                                 ><span>02</span> Crew</a
                             >
                         </li>
@@ -60,17 +71,6 @@
                         </li>
                     </ul>
                 </nav>
-
-                <button class="btn-mobile-nav">
-                    <img
-                        src="../assets/shared/icon-hamburger.svg"
-                        alt="Three light-blue horizontal bars forming a menu icon."
-                    />
-                    <img
-                        src="../assets/shared/icon-close.svg"
-                        alt="Light blue X-shaped close icon formed by two crossing bars; a simple, neutral interface symbol with no text or wider scene."
-                    />
-                </button>
             </header>
 
             <main>
@@ -80,10 +80,34 @@
                             <span>02</span> <span>Meet your crew</span>
                         </h1>
 
-                        <div class="crew-member-info">
+                        <div
+                            class="tabs tabs--dots"
+                            id="crew-tabs"
+                            role="tablist"
+                            aria-label="Crew members"
+                        >
+                            <button
+                                type="button"
+                                id="crew-tabs-1"
+                                role="tab"
+                                aria-selected="true"
+                                aria-controls="crew-tabs-1-panel"
+                                aria-label="Douglas Hurley"
+                            ></button>
+                        </div>
+
+                        <div
+                            class="crew-member-info"
+                            id="crew-tabs-1-panel"
+                            role="tabpanel"
+                            aria-labelledby="crew-tabs-1"
+                            tabindex="0"
+                        >
                             <h2 class="crew-member-name">
-                                <span id="crew-member-role">Commander</span>
-                                <span id="crew-member-name">Douglas Hurley</span>
+                                <span class="crew-member-role">Commander</span>
+                                <span class="crew-member-full-name"
+                                    >Douglas Hurley</span
+                                >
                             </h2>
 
                             <p class="paragraph">
@@ -92,13 +116,6 @@
                                 astronaut. He launched into space for the third
                                 time as commander of Crew Dragon Demo-2.
                             </p>
-                        </div>
-
-                        <div class="tabs tabs--dots">
-                            <div class="selected"></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
                         </div>
                     </div>
 
