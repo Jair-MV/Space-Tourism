@@ -4,11 +4,40 @@
 // Mobile Navigation
 
 const btnMobileEl = document.querySelector(".btn-mobile-nav");
-const mainNavEl = document.querySelector(".main-nav");
+const mainNavEl = document.getElementById(
+    btnMobileEl.getAttribute("aria-controls"),
+);
 const headerEl = document.querySelector(".header");
+const mobileNavLayout = window.matchMedia("(width <= 785px)");
+
+function setMobileNavExpanded(expanded) {
+    btnMobileEl.setAttribute("aria-expanded", String(expanded));
+    mainNavEl.inert = mobileNavLayout.matches && !expanded;
+}
+
+function resetMobileNav() {
+    if (mobileNavLayout.matches && mainNavEl.contains(document.activeElement)) {
+        btnMobileEl.focus();
+    }
+
+    setMobileNavExpanded(false);
+}
+
+resetMobileNav();
+mobileNavLayout.addEventListener("change", resetMobileNav);
 
 btnMobileEl.addEventListener("click", function () {
-    headerEl.classList.toggle("main-nav-open");
+    const expanded = btnMobileEl.getAttribute("aria-expanded") === "true";
+    setMobileNavExpanded(!expanded);
+});
+
+headerEl.addEventListener("keydown", function (event) {
+    const expanded = btnMobileEl.getAttribute("aria-expanded") === "true";
+    if (event.key !== "Escape" || !expanded) return;
+
+    event.preventDefault();
+    btnMobileEl.focus();
+    setMobileNavExpanded(false);
 });
 
 // /////////////////////////////////

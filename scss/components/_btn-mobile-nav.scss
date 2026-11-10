@@ -1,5 +1,5 @@
 .btn-mobile-nav {
-    z-index: 9;
+    z-index: 10;
 
     display: none;
     border: none;
@@ -13,12 +13,17 @@
         display: none;
     }
 
-    .main-nav-open & img:first-child {
+    &[aria-expanded="true"] img:first-child {
+        display: none;
+    }
+
+    &[aria-expanded="true"] img:last-child {
         display: block;
     }
 
-    .main-nav-open & img:last-child {
-        display: none;
+    &:focus-visible {
+        outline: 2px solid hsl(var(--clr-neutral-max));
+        outline-offset: 4px;
     }
 
     @media (width <= 785px) {
