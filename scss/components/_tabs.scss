@@ -1,6 +1,15 @@
 .tabs {
     display: flex;
 
+    button {
+        border: 0;
+        background-color: transparent;
+        color: inherit;
+        letter-spacing: inherit;
+        text-transform: inherit;
+        cursor: pointer;
+    }
+
     &--underline {
         gap: 3.2rem;
 
@@ -11,15 +20,15 @@
         text-transform: uppercase;
         color: hsl(var(--clr-secondary));
 
-        li {
+        button {
             position: relative;
 
+            display: flex;
+            align-items: flex-start;
             height: 3.2rem;
-
-            cursor: pointer;
         }
 
-        li::before {
+        button::before {
             content: "";
 
             position: absolute;
@@ -30,15 +39,15 @@
             height: 3px;
         }
 
-        li:hover::before {
+        button:hover::before {
             background-color: hsl(var(--clr-neutral-max) / 0.5);
         }
 
-        li.selected {
+        button[aria-selected="true"] {
             color: hsl(var(--clr-neutral-max));
         }
 
-        li.selected::before {
+        button[aria-selected="true"]::before {
             background-color: hsl(var(--clr-neutral-max));
         }
 
@@ -55,24 +64,23 @@
     &--dots {
         gap: 4rem;
 
-        div {
+        button {
             width: 15px;
             aspect-ratio: 1;
             background-color: hsl(var(--clr-neutral-max) / 17.44%);
             border-radius: 50%;
-            cursor: pointer;
         }
 
-        div:hover {
+        button:hover {
             background-color: hsl(var(--clr-neutral-max) / 0.5);
         }
 
-        div.selected {
+        button[aria-selected="true"] {
             background-color: hsl(var(--clr-neutral-max));
         }
 
         @media (width <= 1300px) {
-            div {
+            button {
                 width: 10px;
             }
         }
@@ -83,7 +91,7 @@
         flex-direction: column;
         gap: 3.2rem;
 
-        div {
+        button {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -95,15 +103,13 @@
 
             font-size: 3.2rem;
             font-family: var(--ff-alt-beta);
-
-            cursor: pointer;
         }
 
-        div:hover {
+        button:hover {
             border-color: hsl(var(--clr-neutral-max));
         }
 
-        div.selected {
+        button[aria-selected="true"] {
             color: hsl(var(--clr-neutral-min));
             background-color: hsl(var(--clr-neutral-max));
             border-color: hsl(var(--clr-neutral-max));
@@ -113,17 +119,23 @@
             flex-direction: row;
             gap: 1.6rem;
 
-            div {
+            button {
                 width: 5.6rem;
                 font-size: 2.4rem;
             }
         }
 
         @media (width <= 785px) {
-            div {
+            button {
                 width: 4rem;
                 font-size: 1.8rem;
             }
         }
     }
+}
+
+.tabs button:focus-visible,
+[role="tabpanel"]:focus-visible {
+    outline: 2px solid hsl(var(--clr-neutral-max));
+    outline-offset: 4px;
 }

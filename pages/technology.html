@@ -80,16 +80,33 @@
                     <div class="grid grid--span">
                         <div>
                             <div class="technology-info-block">
-                                <div class="tabs tabs--circles">
-                                    <div class="selected">1</div>
-                                    <div>2</div>
-                                    <div>3</div>
+                                <div
+                                    class="tabs tabs--circles"
+                                    id="technology-tabs"
+                                    role="tablist"
+                                    aria-label="Space technology"
+                                >
+                                    <button
+                                        type="button"
+                                        id="technology-tabs-1"
+                                        role="tab"
+                                        aria-selected="true"
+                                        aria-controls="technology-tabs-1-panel"
+                                        aria-label="1. Launch vehicle"
+                                    >
+                                        1
+                                    </button>
                                 </div>
 
-                                <div>
+                                <div
+                                    id="technology-tabs-1-panel"
+                                    role="tabpanel"
+                                    aria-labelledby="technology-tabs-1"
+                                    tabindex="0"
+                                >
                                     <h2 class="technology-name">
                                         <span>The terminology</span>
-                                        <span id="technology-name"
+                                        <span class="technology-term"
                                             >Launch vehicle</span
                                         >
                                     </h2>
